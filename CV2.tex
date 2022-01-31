@@ -1,0 +1,181 @@
+\documentclass[a4paper,10pt]{article}
+
+%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[big]{layaureo} 				%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+\usepackage{array}
+\usepackage{apacite}
+\usepackage{bibentry}
+\makeatletter\let\saved@bibitem\@bibitem\makeatother
+\usepackage[colorlinks=true]{hyperref}
+\makeatletter\let\@bibitem\saved@bibitem\makeatother
+
+
+% hanging publications: 1st line starts at beginning of line, 
+% further lines are placed a bit to the right
+\usepackage{hanging}
+\newcommand\publication[1]{%
+	\smallskip\par\hangpara{1.5em}{1}\bibentry{#1}\smallskip
+}
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.3cm}
+
+%Italian hyphenation for the word: ''corporations''
+\hyphenation{im-pre-se}
+
+%-------------WATERMARK TEST [**not part of a CV**]---------------
+\usepackage[absolute]{textpos}
+
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+%WATERMARK TEST [**not part of a CV**]---------------
+%\font\wm=''Baskerville:color=787878'' at 8pt
+%\font\wmweb=''Baskerville:color=FF1493'' at 8pt
+%{\wm 
+%	\begin{textblock}{1}(0,0)
+%		\rotatebox{-90}{\parbox{500mm}{
+%			Typeset by Alessandro Plasmati with \XeTeX\  \today\ for 
+%			{\wmweb \href{http://www.aleplasmati.comuv.com}{aleplasmati.comuv.com}}
+%		}
+%	}
+%	\end{textblock}
+%}
+
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE-------------
+
+\par{\centering
+		{\Huge \sf\bf{{Andrew Kampfschulte, MS}}
+	}\par}
+	
+\begin{center}
+\begin{tabular}{c|c|c}
+andykampfschulte@gmail.com \hfill  & 616-826-9706 & \hfill 958 Oakleigh Rd. Grand Rapids, MI
+\end{tabular}
+\bigskip
+\end{center}
+
+%--------------------SECTIONS-----------------------------------
+
+
+%Section: Work Experience at the top
+\section{Research Experience}
+\begin{tabular}{>{\raggedleft\arraybackslash}p{2.5cm}|p{11cm}}
+
+ \textsc{October 2018} & Senior Biostatistician/Epidemiologist \\
+ \emph{Current}&\emph{Spectrum Health Office of Research \& Education}\\&
+ \footnotesize{Acted as primary statistical support for intrernal research projects. Consulted \& collaborated on grant applications, study design, protocol development, analytical endpoints, and manuscripts with research physicians, scientists, and medical residents. Developed and delivered lectures on basic statistics and study design for research staff. Mentored biostatistics and epidemiology graduate students. Contributed to research projects with external collaborators. }\\\multicolumn{2}{c}{} \\
+ 
+ 
+ 
+ \textsc{August 2016} & Clinical Biostatistician \\ 
+ \textsc{October 2018} &\emph{Innovative Analytics}\\ &
+ \footnotesize{Served as primary statistician for phase I and medical device trials, and secondary statistician for phase II \& III trials. Developed appropriate tables, listings, and figures for compliance with FDA submissions. Authored and peer-revied statisticial analysis plans for clinical studies. Vetted study protocols for preparing project bids. Provided ad-hoc consulting for non-clinical research. Validated phase I-III clinical trial results using SAS. Developed power \& sample size macros in SAS for clinical trials simulations.}\\\multicolumn{2}{c}{} \\
+ 
+  
+ \textsc{January 2015} & Biostatistics Associate \\ 
+ \textsc{January 2016} &\emph{Innovative Analytics}\\&
+ \footnotesize{ Acted as primary statistical support for senior level scientists analyzing valuable laboratory assay
+data from around the globe, complying with FDA, USP, and ICH guidelines. Consulted on, outlined, and organized statistical analyses of various data related to laboratory
+compliance and product formulation. Organized, programmed, and established an electronic data capture system for pilot manufacturing
+facility using JSL scripting language. Utilized a wide array of statistical techniques to performing innovative analyses on manufacturing,
+laboratory, and sales data. Communicated complex statistical interpretations in clear, non-technical terms to wide range of
+company personnel.}\\\multicolumn{2}{c}{} \\
+ 
+\end{tabular}
+
+% Section: Teaching
+\section{Teaching Experience}
+\begin{tabular}{>{\raggedleft\arraybackslash}p{2.5cm}|p{11cm}}
+
+ \textsc{January 2017} & Adunct Faculty, Statistics \\
+ \emph{May 2020}&\emph{Grand Valley State University}\\&
+ \footnotesize{Instructed 1-2 virtual and non-virtual sections of introductory statistics courses per semester. Wrote syllabi in Markdown and \LaTeX. Indepently developed novel lecture material in RMarkdown. Utilized R \& RMarkdown to generate question pools and automatically compile randomized exams. }\\\multicolumn{2}{c}{} \\
+
+ \end{tabular}
+ 
+ 
+ 
+ 
+%Section: Education
+\section{Education}
+\begin{tabular}{>{\raggedleft\arraybackslash}p{2.5cm} p{11cm}}	
+\emph{Current} & PhD in \textsc{Population, Health, and Place} \\
+& \textbf{University of Southern California}, Los Angeles, CA \\ & \\
+
+ \textsc{April} 2016 & Master of Science in \textsc{Biostatistics} \\
+ & \textbf{Grand Valley State University}, Allendale, MI\\ & \\
+
+ \textsc{Dec} 2013 & Bachelor of Science in \textsc{Biology} \\
+ & \textbf{Grand Valley State University}, Allendale, MI\\ & \\
+ 
+ \end{tabular}
+
+%Section: Publications
+	\nobibliography{publications.bib}
+	\bibliographystyle{apacite}	
+
+	\section*{Publications}	
+	
+	% optional: split into different subsections for
+	% peer-reviewed articles, conference abstracts, ...
+
+	% example with links
+	\publication{suicide}
+	\publication{DFA}
+	\publication{MODS}
+	\publication{RGS}
+	\publication{kelbel}
+
+
+%Section: Conferences 
+\section{Conference Presentations}
+	
+	\publication{miller}
+	\publication{CHIPPER}
+	\publication{JMP2}
+	\publication{JMP1}
+	
+\section{Computer Skills}
+\begin{tabular}{>{\raggedleft\arraybackslash}p{2.5cm} p{11cm}}	
+Programming:	& \textsf{R} statistical programming, RMarkdown, SAS, \emph{JMP} Scripting Language (JSL),
+						MSSQL, HTML, {\fb \LaTeX}\setmainfont[SmallCapsFont=Fontin-SmallCaps.otf]{Fontin.otf}\\
+						&  \\
+Software:	& \textsf{R}\textsc{Studio}, SAS Enterprise Guide, JMP, SPSS, SatScan, RedCap, GitBash, PASS, G-Power,
+			 	LibreOffice Suite, Epic Cogito \& SlicerDicer, Microsift Word, Microsoft Excel, Microsoft PowerPoint\\
+\end{tabular}
+
+
+
+%\newpage
+%\hypertarget{gmat}{\textsc{Gmat}\setmainfont{LMRoman10 Regular}\textregistered\setmainfont[SmallCapsFont=Fontin-SmallCaps]{Fontin-Regular}}
+%\XeTeXpdffile ''GMAT.pdf'' page 1 scaled 800
+
+
+\end{document}
